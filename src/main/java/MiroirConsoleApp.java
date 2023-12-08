@@ -15,7 +15,7 @@ public class MiroirConsoleApp {
 
             // Palindrome
             if (estPalindrome(input)) {
-                System.out.println("Bien dit!");
+                System.out.println("Bien dit! C'est un palindrome");
             } else {
                 // Miroir
                 System.out.println("En miroir : " + inverserChaine(input));
@@ -45,13 +45,13 @@ public class MiroirConsoleApp {
         }
     }
 
-    private static boolean estPalindrome(String texte) {
+    static boolean estPalindrome(String texte) {
         String texteSansEspaces = texte.replaceAll("\\s", "").toLowerCase();
         String inverse = new StringBuilder(texteSansEspaces).reverse().toString();
         return texteSansEspaces.equals(inverse);
     }
 
-    private static String inverserChaine(String texte) {
+    static String inverserChaine(String texte) {
         return new StringBuilder(texte).reverse().toString();
     }
 
@@ -66,5 +66,11 @@ public class MiroirConsoleApp {
         } else {
             System.out.println("Gero vakaro!");
         }
+    }
+
+    public static void simulateTimeAndCallSaluer(Calendar morning) {
+    }
+
+    public static void simulateTimeAndCallDireAuRevoir(Calendar morning) {
     }
 }
